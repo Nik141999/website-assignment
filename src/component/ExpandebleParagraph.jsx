@@ -1,14 +1,14 @@
-import { Button } from "@mui/material";
 import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 import CardComponent from "./CardComponent";
-import ProgressCard from "./ProgessComponent";
+import HeaderComponent from "./HeaderComponent";
+import Footer from "./Footer";
 
 const ExpandableParagraph = () => {
   const text = `React's setState function can be updated using either a functional approach or a direct update. The functional approach (setExpanded(prev => !prev)) ensures that the latest state value is used, preventing potential bugs caused by stale state values. On the other hand, a direct update (setExpanded(!expanded)) relies on the current state, which may not reflect the most recent updates due to React's batching mechanism. When multiple state updates occur in quick succession, the functional approach is more reliable. Best practice suggests using functional updates whenever the new state depends on the previous state, ensuring consistency and preventing unexpected behavior.`;
 
-  const words = text.split(" ");
-  const [wordCount, setWordCount] = useState(40);
+  const words = text.split(" ");  
+    const [wordCount, setWordCount] = useState(40);
   const [expanded, setExpanded] = useState(false);
 
   const handleClick = () => {
@@ -25,7 +25,9 @@ const ExpandableParagraph = () => {
         {expanded ? "...see less" : "...see more"}
       </button>
 
-      <CustomButton
+
+      <HeaderComponent />
+      {/* <CustomButton
         label="Hello"
         style={{
           border: "none",
@@ -37,7 +39,9 @@ const ExpandableParagraph = () => {
           height: "30px",
           width: "200px",
         }}
-      />
+      /> */}
+
+      <Footer />
 
       <CardComponent
         style={{
@@ -78,7 +82,7 @@ const ExpandableParagraph = () => {
         ]}
       />
 
-      <ProgressCard />
+
     </>
   );
 };

@@ -19,11 +19,10 @@ const CardComponent = ({ text = [], style = {} }) => {
               style={{
                 backgroundColor: "lightgray",
                 borderRadius: "20px",
-                width: "100%",
-                fontSize: "7px",
+                width: "300",
+                fontSize: "10px",
                 padding: "8px",
-                margin: "5px",
-                paddingBottom: "10px",
+                alignItems: "center",
                 
               }}
             >
