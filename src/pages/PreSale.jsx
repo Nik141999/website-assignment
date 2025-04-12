@@ -1,4 +1,3 @@
-import { Stepper } from "@mui/material";
 import React from "react";
 import CustomStepper from "../component/Stepper";
 import CardComponent from "../component/CardComponent";
@@ -7,7 +6,7 @@ const PreSale = () => {
   return (
     <>
       <div>
-        <div className="pl-40">
+        <div className="pl-40 pt-14">
           <h1 className="text-2xl text-green-500 font-bold">Pre-sale</h1>
           <h2 className="mt-2 text-base">
             During the pre-sale, you will have the option to buy $ELO. All $ELO
@@ -29,7 +28,6 @@ const PreSale = () => {
         <CardComponent
           style={{
             paddingLeft: "20px",
-            backgroundColor: "gray",
             borderRadius: "20px",
             width: "30%",
             display: "flex",            
